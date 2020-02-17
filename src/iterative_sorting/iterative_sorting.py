@@ -27,10 +27,12 @@ def bubble_sort(arr):
         global swap_occurred
         swap_occurred = False
         for j in range(0, len(arr) - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            first_index = j
+            second_index = j + 1
+            if arr[first_index] > arr[second_index]:
+                arr[first_index], arr[second_index] = arr[second_index], arr[first_index]
                 swap_occurred = True
-                print(f'{arr}, swapped {arr[j + 1]} with {arr[j]}')
+                print(f'{arr}, swapped {arr[j + 1]} with {arr[first_index]}')
         if not swap_occurred:
             pass
     return arr
