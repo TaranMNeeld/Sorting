@@ -14,6 +14,7 @@ def selection_sort(arr):
             if arr[j] < arr[smallest_index]:
                 # TO-DO: swap
                 arr[j], arr[smallest_index] = arr[smallest_index], arr[j]
+                print(f'{arr}, swapped {arr[j]} with {arr[smallest_index]}')
     return arr
 
 
@@ -32,13 +33,13 @@ def bubble_sort(arr):
             if arr[first_index] > arr[second_index]:
                 arr[first_index], arr[second_index] = arr[second_index], arr[first_index]
                 swap_occurred = True
-                print(f'{arr}, swapped {arr[j + 1]} with {arr[first_index]}')
+                print(f'{arr}, swapped {arr[second_index]} with {arr[first_index]}')
         if not swap_occurred:
             pass
     return arr
 
 
-bubble_sort(test_arr)
+selection_sort(test_arr)
 
 
 # STRETCH: implement the Count Sort function below
