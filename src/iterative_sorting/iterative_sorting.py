@@ -1,6 +1,6 @@
 # TO-DO: Complete the selection_sort() function below
 
-test_arr = [5, 4, 1, 7, 8, 0, 2, 3, 9, 6]
+test_arr = [1, 2, 3, 4, 5,1,2,3]
 
 
 def selection_sort(arr):
@@ -25,6 +25,7 @@ swap_occurred = False
 def bubble_sort(arr):
     print(arr)
     for i in range(0, len(arr) - 1):
+        print('loop')
         global swap_occurred
         swap_occurred = False
         for j in range(0, len(arr) - 1):
@@ -35,11 +36,11 @@ def bubble_sort(arr):
                 swap_occurred = True
                 print(f'{arr}, swapped {arr[second_index]} with {arr[first_index]}')
         if not swap_occurred:
-            pass
+            break
     return arr
 
 
-selection_sort(test_arr)
+bubble_sort(test_arr)
 
 
 # STRETCH: implement the Count Sort function below
